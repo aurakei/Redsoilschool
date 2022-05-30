@@ -1,0 +1,271 @@
+:root{
+  --body-font:"Lucida Console" serif;
+  --body-font-color:#222;
+}
+
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: #e6e6e6;
+  font-family: var(--body-font);
+  color: var(--body-font-color);
+  scroll-behavior: smooth;
+}
+
+
+/*navbar*/
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: .8em;
+    overflow: hidden;
+    background-color: maroon;
+}
+
+/* Float the list items side by side */
+.topnav li {
+  float: right;
+  padding-right: 20px;
+}
+
+/* Style the links inside the list items */
+.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.nav-link{
+  font-size: 1.2em !important;
+}
+/* Change background color of links on hover */
+.topnav li a:hover {background-color: #111;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+.topnav li.dropdown {display: none;}
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.navbar-toggler {
+    float: right;
+    
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive li.navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  .topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+.navbar-toggler{
+  float: left;
+  color: transparent;
+  border-color: white;
+  border-radius: 3px;
+}
+
+.navbar-toggler-icon{
+  color: white;
+}
+li .active{
+  background-color: #330000;
+}
+.nav-link{
+  font-size: 1.2em !important;
+}
+/*dropdown list*/
+.dropbtn {
+    background-color: maroon;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    z-index: 1600;
+    transform: translateY(-50%);
+    
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: maroon}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: maroon;
+}
+li{
+  border-top-right-radius: 2em;
+  border-top-left-radius: 2em;
+  border-color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.padding{
+  padding-bottom: 2rem;
+}
+.welcome{
+  width: 75%;
+  margin: 0 auto;
+}
+.welcome hr{
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-bottom: 1rem;
+  margin-top: .3rem;
+}
+footer{
+  background-color: maroon;
+  color: #d5d5d5;
+}
+.light{
+border-top: 1px solid #d5d5d5;
+width: 75%;
+margin-top: .8rem;
+margin-bottom: 1rem;
+}
+
+.light-100{
+border-top: 1px solid #d5d5d5;
+width: 100%;
+margin-top: .8rem;
+margin-bottom: 1rem;
+}
+
+.info{
+  border-radius: 5%;
+    padding: 20px; 
+    width: 100%;
+    height: 300px;
+    resize: vertical;
+    overflow: auto;
+}
+/*slideshow*/
+.display-5{
+  padding-top: 1em;
+}
+
+
+/*----Media queries----*/
+@media(min-width: 768px){
+    header{
+  position: fixed;
+}
+}
+@media (max-width: 992px){
+
+}
+@media (max-width: 768px){
+.display-4{
+  font-size: 200%;
+}
+.alumni{
+  padding: 3rem 15rem;
+}
+  li{
+    font-size: 80%;
+  }
+
+.alumni{
+  padding: 3rem 15rem;
+  }}
+@media (max-width: 576px){
+ .display-4{
+  font-size: 160%;
+} 
+.alumni{
+  padding: 3rem 15rem;
+}
+.display-5{
+  font-size: 160%;
+}
+
+
+/*imageflexbox*/
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+} 
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+.photos-section{
+  background-color: #8c8c8c8c
+}
+
+/*---Firefox Bug fix----*/
+.carousel-item{
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0,5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility:visible;
+backface-visibility: visible;}
+
+/*----Fixed background image---*/
+figure{
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+
+}
+
+
+  /*----Bootstrap Padding Fix---*/
+  [class*="col-"]{
+    padding: 1rem;
+  }
+}
